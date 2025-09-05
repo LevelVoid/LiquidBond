@@ -22,10 +22,10 @@ interface BondFiltersProps {
 const BondFilters = ({ onFiltersChange }: BondFiltersProps) => {
   const [filters, setFilters] = useState<FilterState>({
     search: "",
-    rating: "",
-    maturity: "",
+    rating: "all",
+    maturity: "all",
     yieldRange: [2, 8],
-    sector: ""
+    sector: "all"
   });
 
   const [showAIPrompt, setShowAIPrompt] = useState(false);
@@ -40,10 +40,10 @@ const BondFilters = ({ onFiltersChange }: BondFiltersProps) => {
   const clearFilters = () => {
     const cleared = {
       search: "",
-      rating: "",
-      maturity: "",
+      rating: "all",
+      maturity: "all",
       yieldRange: [2, 8] as [number, number],
-      sector: ""
+      sector: "all"
     };
     setFilters(cleared);
     onFiltersChange?.(cleared);
@@ -59,7 +59,7 @@ const BondFilters = ({ onFiltersChange }: BondFiltersProps) => {
   const activeFiltersCount = Object.values(filters).filter(
     (value, index) => {
       if (index === 3) return false; // Skip yieldRange for now
-      return value && value !== "";
+      return value && value !== "" && value !== "all";
     }
   ).length;
 
@@ -133,7 +133,7 @@ const BondFilters = ({ onFiltersChange }: BondFiltersProps) => {
               <SelectValue placeholder="Any rating" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Any rating</SelectItem>
+              <SelectItem value="all">Any rating</SelectItem>
               <SelectItem value="AAA">AAA</SelectItem>
               <SelectItem value="AA">AA+ to AA-</SelectItem>
               <SelectItem value="A">A+ to A-</SelectItem>
@@ -151,7 +151,7 @@ const BondFilters = ({ onFiltersChange }: BondFiltersProps) => {
               <SelectValue placeholder="Any maturity" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Any maturity</SelectItem>
+              <SelectItem value="all">Any maturity</SelectItem>
               <SelectItem value="1y">Less than 1 year</SelectItem>
               <SelectItem value="1-3y">1-3 years</SelectItem>
               <SelectItem value="3-5y">3-5 years</SelectItem>
@@ -169,7 +169,7 @@ const BondFilters = ({ onFiltersChange }: BondFiltersProps) => {
               <SelectValue placeholder="Any sector" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">Any sector</SelectItem>
+              <SelectItem value="all">Any sector</SelectItem>
               <SelectItem value="government">Government</SelectItem>
               <SelectItem value="corporate">Corporate</SelectItem>
               <SelectItem value="municipal">Municipal</SelectItem>
