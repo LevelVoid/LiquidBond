@@ -4,8 +4,6 @@ LiquidBond is a modern web application designed to **simplify bond investments**
 Our goal is to make navigating bond markets easier for both beginners and experienced investors.  
 
 ---
-## SYSTEM FLOW
-![System Flow](https://raw.githubusercontent.com/LevelVoid/LiquidBond/e10dd28067855bd569a57836fa6e602e1913e0ac/SystemFlow.svg)
 
 ## KEY FEATURES
 1. Bond-Aware pricing: Real-time bond pricing reflected. And for AMMs, price per token is not just adjusted based on supply/demand but adjusted for time-to-maturity and credit spread, keeping pricing closer to real-world bond risk profiles.
@@ -48,7 +46,10 @@ Portfolio dashboard shows holdings, accrued coupon income, and exit options.
 Institutions/wealth managers can contribute bonds + cash to the AMM pool. Earn fees from trades and incentives for keeping spreads tight.
 
 8. Audit & Compliance Tools
-Every trade is logged immutably (blockchain-style ledger). Regulators/auditors can trace full transaction history ensuring trust & accountability. 
+Every trade is logged immutably (blockchain-style ledger). Regulators/auditors can trace full transaction history ensuring trust & accountability.
+
+SYSTEM WORKFLOW
+![System Flow](https://github.com/LevelVoid/LiquidBond/blob/main/SystemFlow.png?raw=true)
 
 ---
 
