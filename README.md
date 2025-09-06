@@ -67,10 +67,10 @@ SYSTEM WORKFLOW
 
 ## 🛠️ Tech Stack
 - Frontend: HTML, CSS, JavaScript  
-- Backend: [your backend tech here, e.g., Django / Flask / Node.js]  
-- Database: [e.g., MySQL / PostgreSQL]  
+- Backend: [Node.js, Python]  
+- Database: [MySQL / PostgreSQL]  
 
-This project,s UI is built with:
+This project's UI is built with:
 - Vite
 - TypeScript
 - React
